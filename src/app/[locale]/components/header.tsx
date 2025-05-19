@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import type React from "react";
 
 import {Button} from "@/components/ui/button";
 import {ChevronRight, Menu, Phone} from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useRef, useState} from "react";
 import {MobileMenu} from "./mobile-menu";
@@ -63,6 +63,7 @@ export function Header() {
     {
       label: "Admissions Support",
       href: "/services/admissions-support",
+      icon: "/images/menu-icons/cap.svg",
       hasSubmenu: true,
       submenu: [
         {label: "US College Admissions", href: "/services/us-college"},
@@ -75,13 +76,26 @@ export function Header() {
         {label: "Law School Admissions", href: "/services/law-school"},
       ],
     },
-    {label: "Crimson Rise", href: "/services/crimson-rise"},
-    {label: "US Boarding School Program", href: "/services/us-boarding-school"},
+    {
+      label: "Crimson Rise",
+      href: "/services/crimson-rise",
+      icon: "/images/menu-icons/family.svg",
+    },
+    {
+      label: "US Boarding School Program",
+      href: "/services/us-boarding-school",
+      icon: "/images/menu-icons/us-flag.svg",
+    },
     {
       label: "Indigo Research-Online Research Opportunities For High Schooler",
       href: "/services/indigo-research",
+      icon: "/images/menu-icons/paper.svg",
     },
-    {label: "Essay Review", href: "/services/essay-review"},
+    {
+      label: "Essay Review",
+      href: "/services/essay-review",
+      icon: "/images/menu-icons/pen.svg",
+    },
     {
       label: "Crimson Foundation Programs",
       href: "/services/foundation-programs",
@@ -90,8 +104,16 @@ export function Header() {
       label: "Delta Institute-Internship Opportunities",
       href: "/services/delta-institute",
     },
-    {label: "Crimson Talent Immigration", href: "/services/talent-immigration"},
-    {label: "Online Tutoring", href: "/services/online-tutoring"},
+    {
+      label: "Crimson Talent Immigration",
+      href: "/services/talent-immigration",
+      icon: "/images/menu-icons/adventure.svg",
+    },
+    {
+      label: "Online Tutoring",
+      href: "/services/online-tutoring",
+      icon: "/images/menu-icons/laptop.svg",
+    },
   ];
 
   const aboutMenu = [
@@ -128,18 +150,25 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-white border-b">
-        <div className="mx-auto flex items-center justify-between h-24 px-4 md:px-20">
-          <div className="flex items-center gap-6">
+        <div className="mx-auto flex items-center justify-between h-20 lg:h-24 px-4 lg:px-20">
+          <div className="flex items-center gap-6 w-full lg:w-auto justify-between">
+            <button
+              className="lg:hidden"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open mobile menu"
+              title="Open mobile menu"
+            >
+              <Menu size={24} />
+            </button>
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
-                alt="Crimson Education Logo"
-                width={120}
-                height={40}
-                className="h-auto"
+              <img
+                src="/logo.svg"
+                alt="UniPrep Logo"
+                className="h-8 lg:h-12 w-auto"
               />
             </Link>
-            <nav className="hidden md:flex items-center gap-6" ref={menuRef}>
+            <div></div>
+            <nav className="hidden lg:flex items-center gap-6" ref={menuRef}>
               <div className="relative">
                 <button
                   onClick={() => toggleMenu("services")}
@@ -176,7 +205,14 @@ export function Header() {
                             }
                             className="flex items-center justify-between w-full px-4 py-3 text-sm hover:bg-gray-100 rounded-md"
                           >
-                            <span>{item.label}</span>
+                            <div className="flex items-center gap-2">
+                              <img
+                                src={item.icon}
+                                alt="Icon"
+                                className="w-5 h-5 grayscale"
+                              />
+                              <span>{item.label}</span>
+                            </div>
                             <ChevronRight
                               size={16}
                               className={`transition-transform ${
@@ -191,7 +227,14 @@ export function Header() {
                             href={item.href}
                             className="block px-4 py-3 text-sm hover:bg-gray-100 rounded-md"
                           >
-                            {item.label}
+                            <div className="flex items-center gap-2">
+                              <img
+                                src={item.icon}
+                                className="w-5 h-5 grayscale"
+                                alt="Icon"
+                              />
+                              <span>{item.label}</span>
+                            </div>
                           </Link>
                         )}
                         {item.hasSubmenu &&
@@ -308,21 +351,13 @@ export function Header() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-2">
               <Phone className="h-4 w-4" />
               <span className="text-sm font-medium">+971 50000000</span>
             </div>
-            <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full">
+            <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full hidden lg:flex">
               ENQUIRE NOW
             </Button>
-            <button
-              className="md:hidden"
-              onClick={() => setMobileMenuOpen(true)}
-              aria-label="Open mobile menu"
-              title="Open mobile menu"
-            >
-              <Menu size={24} />
-            </button>
           </div>
         </div>
       </header>
