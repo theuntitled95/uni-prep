@@ -153,7 +153,7 @@ export function Reviews() {
                 <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
                   <div className="h-full bg-white p-6 rounded-lg mx-2 text-center">
                     <p className="text-gray-600 mb-4 text-sm italic">
-                      "{review.text}"
+                      &quot;{review.text}&quot;
                     </p>
                     <div className="flex mb-4 items-center justify-center">
                       {[...Array(review.rating)].map((_, i) => (

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {Button} from "@/components/ui/button";
 import Image from "next/image";
 
@@ -16,17 +17,18 @@ export function SuccessStories() {
             <p className="text-gray-600 mb-4">
               Our students have been accepted to Harvard, Stanford, Oxford,
               Cambridge, and other top universities around the world. With
-              Crimson's support, our students are 4x more likely to gain
+              Crimson&apos;s support, our students are 4x more likely to gain
               admission to Ivy League and other top-tier universities.
             </p>
             <p className="text-gray-600 mb-4">
-              We've helped students secure over $83 million in scholarships and
-              financial aid. Our comprehensive approach to admissions consulting
-              has led to thousands of success stories across the globe.
+              We&apos;ve helped students secure over $83 million in scholarships
+              and financial aid. Our comprehensive approach to admissions
+              consulting has led to thousands of success stories across the
+              globe.
             </p>
             <p className="text-gray-600 mb-6">
-              Whether you're aiming for the Ivy League, Oxbridge, or other top
-              universities, Crimson can help you achieve your dreams.
+              Whether you&apos;re aiming for the Ivy League, Oxbridge, or other
+              top universities, Crimson can help you achieve your dreams.
             </p>
             <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full">
               READ OUR SUCCESS STORIES

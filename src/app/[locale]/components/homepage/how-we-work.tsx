@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import {Button} from "@/components/ui/button";
@@ -5,8 +6,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Image from "next/image";
@@ -161,8 +160,8 @@ export function HowWeWork() {
           Our college counseling model sees our students receive individualized
           support in every aspect of their US/UK (or EU) application(s) — from
           university selection strategy, test prep and personal statement/essay
-          support, to extracurricular mentoring and interview practice. Here's
-          how we work!
+          support, to extracurricular mentoring and interview practice.
+          Here&apos;s how we work!
         </p>
 
         {/* Step navigation buttons */}

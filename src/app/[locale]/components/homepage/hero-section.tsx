@@ -16,7 +16,7 @@ export function HeroSection() {
       <div className="container max-w-[80rem] mx-auto relative z-10 px-4 md:px-6 py-16 md:py-24 lg:py-32">
         <div className="max-w-xl">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            The World's Leading US/UK College Admissions Consulting Company
+            The World&apos;s Leading US/UK College Admissions Consulting Company
           </h1>
           <p className="text-base md:text-lg mb-8">
             Crimson Education takes college admissions counseling to a new level

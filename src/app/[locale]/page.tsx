@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const t = useTranslations("Homepage");
 
   return (

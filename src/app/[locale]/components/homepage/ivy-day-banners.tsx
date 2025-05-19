@@ -20,7 +20,7 @@ export function IvyDayBanner() {
             </h2>
             <p className="text-sm md:text-base">
               Harvard, Yale, Princeton, Columbia. Our students are getting in —
-              and we're tracking it live. See the offers as they land.
+              and we&apos;re tracking it live. See the offers as they land.
             </p>
           </div>
           <Button className="bg-red-500 hover:bg-red-600 text-white rounded-full whitespace-nowrap">
